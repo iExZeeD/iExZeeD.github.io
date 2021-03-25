@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+
+:root{
+    --main-darkgray: rgb(41, 48, 56);
+    --main-gray: rgb(48,56,65);
+    --main-orange: rgb(255, 115, 0);
+    --main-white: rgb(255,255,255);
+    --main-black: rgb(0,0,0);
+    --font: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+header{
+    background-color: var(--main-orange);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar ul li{
+    display: inline;
+    padding: 0 2rem;
+    
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: var(--main-white);
+    font-family: var(--font);
+    font-size: 1.5rem;
+}
+
+#welcome-section{
+    background: var(--main-gray);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-section{
+    font-size: 4rem;
+    font-family: var(--font);
+    color: var(--main-white);
+}
+
+#welcome-section .tags{
+    font-size: 5rem;
+    color: var(--main-orange);
+    font-family: var(--font);
+}
+
+#projects{
+    background: var(--main-white);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

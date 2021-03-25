@@ -52,6 +52,7 @@ ul li a:hover {
 #header {
     width: 100%;
     position: fixed;
+    background-color:rgb(36, 36, 36);
 }
 
 #header-img {

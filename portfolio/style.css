@@ -4,6 +4,7 @@
     --main-darkgray: rgb(41, 48, 56);
     --main-gray: rgb(48,56,65);
     --main-orange: rgb(255, 115, 0);
+    --main-orange-t: rgba(255, 115, 0, .2);
     --main-white: rgb(255,255,255);
     --main-black: rgb(0,0,0);
     --font: 'Montserrat', sans-serif;
@@ -17,6 +18,7 @@
 
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -26,6 +28,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 5px solid var(--main-gray);
 }
 
 #navbar ul li{
@@ -48,15 +51,27 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-#welcome-section{
+#welcome-section {
     font-size: 4rem;
     font-family: var(--font);
     color: var(--main-white);
 }
 
-#welcome-section .tags{
+#welcome-section .name{
+    color: var(--main-orange);
+}
+
+#welcome-section p{
+    display: flex;
+    font-size: 2rem;
+    font-family: var(--font);
+    color: var(--main-white);
+}
+
+#welcome-section .code{
     font-size: 5rem;
     color: var(--main-orange);
     font-family: var(--font);
@@ -65,7 +80,83 @@ header{
 #projects{
     background: var(--main-white);
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
+
+.project-tile{
+    margin: 1rem;
+    padding: 2rem;
+    background-color: var(--main-gray);
+    border-radius: 1rem;
+}
+
+.project-img{
+    height: 500px;
+    width: 500px;
+}
+
+.project-title{
+    color: var(--main-orange);
+    font-family: var(--font);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-view{
+    text-decoration: none;
+    color: var(--main-orange);
+    background-color: var(--main-white);
+    font-size: 1.5rem;
+    font-family: var(--font);
+    border-radius: 2rem;
+    padding: 0.5rem 3rem;
+}
+
+.project-title {
+    color: var(--main-white);
+}
+
+.btn-view:hover{
+    background-color: var(--main-orange);
+    color: var(--main-gray);
+}
+
+#socials{
+    background: var(--main-gray);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 11rem;
+    font-family: var(--font);
+    color: var(--main-white);
+    font-size: 4rem;
+}
+
+#socials .github-logo{
+    width: 7rem;
+    background-color: var(--main-orange);
+    border-radius: 100%;
+}
+#socials p{
+    color: var(--main-orange);
+}
+
+@media (max-width: 1000px){
+    #welcome-section{
+        font-size: 2rem;
+    }
+
+    #welcome-section p{
+        font-size: 1rem;
+    }
+    #welcome-section .code{
+        font-size: 2rem;
+    }
+}
+
